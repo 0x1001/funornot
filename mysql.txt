@@ -13,3 +13,11 @@ INSERT INTO pics (name) VALUES ("1ef87eb475567e6708eeb0e86eccbfb7.gif");
 INSERT INTO pics (name) VALUES ("1f917bc7330b6bc820ebd366cbd423b2.gif");
 
 SELECET COUNT(*) FROM pics;
+SELECT id,name FROM pics ORDER BY RAND() LIMIT 2;
+UPDATE pics SET grade = grade + 1 WHERE id = 1;
+UPDATE pics SET grade = grade - 1 WHERE id = 1;
+
+SELECT name FROM pics ORDER BY grade DESC LIMIT 0,1;
+SELECT name FROM pics ORDER BY grade DESC LIMIT 1,1;
+SELECT name FROM pics ORDER BY grade DESC LIMIT 2,1;
+SELECT name FROM pics ORDER BY grade DESC LIMIT 3,1;

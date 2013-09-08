@@ -15,6 +15,11 @@ function decrement_pic($id){
     return _mysql($sql,array($id));
 }
 
+function get_pic($rank){
+    $sql = 'SELECT name FROM pics ORDER BY grade DESC LIMIT :rank , 1';
+    return _mysql($sql,array(':rank' => $rank));
+}
+
 function _mysql($sql,$params = False){
     include('config.php');
 

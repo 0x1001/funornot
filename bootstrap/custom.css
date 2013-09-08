@@ -1,0 +1,11 @@
+body {
+    padding-top: 60px;
+    padding-bottom: 20px;
+}
+
+.main {
+    margin: 0 auto;
+    max-width: 70%;
+    height: 100%;
+    overflow: auto;
+}
