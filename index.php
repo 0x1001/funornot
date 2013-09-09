@@ -13,10 +13,10 @@ if (isset($_POST["id_i"]) and isset($_POST["id_d"])){
 $pics = get_random_pics();
 ?>
   <body>
-    <?php include('includes/nav.php'); ?>
+    <?php include('includes/nav.php'); nav(basename(__FILE__));?>
     <div class="main">
         <div class="hero-unit">
-            <h1>Fun or not?</h1>
+            <h1>Fun or noT?</h1>
             <p>The funniest <a href="http://en.wikipedia.org/wiki/Graphics_Interchange_Format" rel='tooltip' data-toggle="tooltip" title="Graphics Interchange Format">GIFs</a> collection from various sites around the globe!</p>
             <p>You will always see two random <a href="http://en.wikipedia.org/wiki/Graphics_Interchange_Format" rel='tooltip' data-toggle="tooltip" title="Graphics Interchange Format">GIFs</a> click on one you like the most.</p>
             <hr>
