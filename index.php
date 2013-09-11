@@ -29,6 +29,7 @@ $pics = get_random_pics();
                         <a href="javascript:choosePic(<?php echo $pics[0]->id; ?>,<?php echo $pics[1]->id; ?>);"><img class="img-polaroid" src="img/<?php echo $pics[0]->name; ?>"></a>
                     </p>
                 </li>
+                <li><p class="text-center"></p></li>
                 <li>
                     <p class="text-center">
                         <a href="javascript:choosePic(<?php echo $pics[1]->id; ?>,<?php echo $pics[0]->id; ?>);"><img class="img-polaroid" src="img/<?php echo $pics[1]->name; ?>"></a>

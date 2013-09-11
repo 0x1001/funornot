@@ -19,7 +19,8 @@
     <div class="main">
         <div class="hero-unit">
             <h1>Fun or not?</h1>
-            <p>Ranking.</p>
+            <p>From the best to the worst.</p>
+            <p>User ranking.</p>
             <hr>
             <ul class="pager">
                 <?php 
@@ -37,7 +38,7 @@
                  ?>
                 
             </ul>
-            <p class="text-center"><img src='img/<?php echo $pic[0]->name; ?>'></p>
+            <p class="text-center"><img class="img-polaroid" src='img/<?php echo $pic[0]->name; ?>'></p>
             <hr>
             <?php include('includes/commercial.php'); ?>
         </div>

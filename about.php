@@ -9,10 +9,14 @@ include('includes/database.php');
     <div class="main">
         <div class="hero-unit">
             <h1>Fun or noT?</h1>
-            
-            <hr>
-            
-            <hr>
+            <p>Over some long period of time I collected many GIFs from different sites. I decided to share may collection with the Internet :).</p>
+            <p>Special thanks for these web sites for inspiration and source of the best GIFs ever. </p>
+            <ul>
+            <li><a href='http://kwejk.pl/'>http://kwejk.pl/</a></li>
+            <li><a href='http://animalsbeingdicks.com/'>http://animalsbeingdicks.com/</a></li>
+            <li><a href='http://bratm.najky.sk/'>http://bratm.najky.sk/</a></li>
+            </ul>
+            <p>Enjoy :)</p>
         </div>
         <?php include('includes/footer.php'); ?>
     </div>
