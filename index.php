@@ -3,6 +3,7 @@
 <?php 
 include('includes/header.php');
 include('includes/database.php');
+include('config.php');
 
 if (isset($_POST["id_i"]) and isset($_POST["id_d"])){
     increment_pic($_POST["id_i"]);
@@ -16,7 +17,7 @@ $pics = get_random_pics();
     <?php include('includes/nav.php'); nav(basename(__FILE__));?>
     <div class="main">
         <div class="hero-unit">
-            <h1>Fun or noT?</h1>
+            <h1><img src='img/funornot_h1.png'> Fun or noT?</h1>
             <p>The funniest <a href="http://en.wikipedia.org/wiki/Graphics_Interchange_Format" rel='tooltip' data-toggle="tooltip" title="Graphics Interchange Format">GIFs</a> collection from various sites around the globe!</p>
             <p>You will always see two random <a href="http://en.wikipedia.org/wiki/Graphics_Interchange_Format" rel='tooltip' data-toggle="tooltip" title="Graphics Interchange Format">GIFs</a> click on one you like the most.</p>
             <hr>
@@ -26,13 +27,13 @@ $pics = get_random_pics();
                 <ul class="thumbnails">
                 <li>
                     <p class="text-center">
-                        <a href="javascript:choosePic(<?php echo $pics[0]->id; ?>,<?php echo $pics[1]->id; ?>);"><img class="img-polaroid" src="img/<?php echo $pics[0]->name; ?>"></a>
+                        <a onmouseout="javascript:changeImageDefault()" onmouseover="javascript:changeImageGreater()" href="javascript:choosePic(<?php echo $pics[0]->id; ?>,<?php echo $pics[1]->id; ?>);"><img class="img-polaroid" src="<?php echo $gifs_path[$pics[0]->location]; ?>/<?php echo $pics[0]->name; ?>"></a>
                     </p>
                 </li>
-                <li><p class="text-center"></p></li>
+                <li><p class="text-center"><img id="choose_img" src="img/funornot_80x75.png"></p></li>
                 <li>
                     <p class="text-center">
-                        <a href="javascript:choosePic(<?php echo $pics[1]->id; ?>,<?php echo $pics[0]->id; ?>);"><img class="img-polaroid" src="img/<?php echo $pics[1]->name; ?>"></a>
+                        <a onmouseout="javascript:changeImageDefault()" onmouseover="javascript:changeImageLesser()" href="javascript:choosePic(<?php echo $pics[1]->id; ?>,<?php echo $pics[0]->id; ?>);"><img class="img-polaroid" src="<?php echo $gifs_path[$pics[1]->location]; ?>/<?php echo $pics[1]->name; ?>"></a>
                     </p>
                 </li>
                 </ul>

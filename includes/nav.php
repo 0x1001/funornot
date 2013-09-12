@@ -9,7 +9,7 @@ function nav($page){
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
         </button>
-      <a class="brand" href="index.php">Fun or noT?</a>
+      <a class="brand" href="index.php"><img src='img/funornot_21x20.png'> Fun or noT?</a>
       <div class="nav-collapse collapse">
         <ul class="nav">
           <li <?php if ($page == "index.php") echo 'class="active"';?>><a href="index.php">Home</a></li>

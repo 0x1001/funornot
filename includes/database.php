@@ -1,7 +1,7 @@
 <?php
 
 function get_random_pics(){
-    $sql = "SELECT id,name FROM pics ORDER BY RAND() LIMIT 2";
+    $sql = "SELECT id,name,location FROM pics ORDER BY RAND() LIMIT 2";
     return _mysql($sql);
 }
 
@@ -16,7 +16,7 @@ function decrement_pic($id){
 }
 
 function get_pic($rank){
-    $sql = "SELECT name FROM pics ORDER BY grade DESC LIMIT :rank , 2";
+    $sql = "SELECT name,location FROM pics ORDER BY grade DESC LIMIT :rank , 2";
     return _mysql($sql,array(':rank' => intval($rank)));
 }
 
