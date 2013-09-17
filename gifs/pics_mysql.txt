@@ -1,0 +1,10 @@
+INSERT INTO pics (name) VALUES ("01a33baf7e29c4f1b99a976c8f4f2e7f.gif");
+INSERT INTO pics (name) VALUES ("2dbd2d61071386cfced905993a8d38e7.gif");
+INSERT INTO pics (name) VALUES ("32377f532d04a80b551b66641a07ded1.gif");
+INSERT INTO pics (name) VALUES ("3c31064f093e7bd6dbd9cdf17f73b672.gif");
+INSERT INTO pics (name) VALUES ("7991fa7f26a7df55b945558814fb84db.gif");
+INSERT INTO pics (name) VALUES ("862b915c763bdd088012ce6f784e86f3.gif");
+INSERT INTO pics (name) VALUES ("c3e47539f278818062932fdd2453b342.gif");
+INSERT INTO pics (name) VALUES ("e3fe6fcc5380637563c875c74a60b3fa.gif");
+INSERT INTO pics (name) VALUES ("f6fc85d412241e8209530e22d8fabaa7.gif");
+INSERT INTO pics (name) VALUES ("fddc79c908f5bca1026cf91cf2ac4289.gif");
