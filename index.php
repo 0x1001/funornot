@@ -27,13 +27,17 @@ $pics = get_random_pics();
                 <ul class="thumbnails">
                 <li>
                     <p class="text-center">
-                        <a onmouseout="javascript:changeImageDefault()" onmouseover="javascript:changeImageGreater()" href="javascript:choosePic(<?php echo $pics[0]->id; ?>,<?php echo $pics[1]->id; ?>);"><img class="img-polaroid" src="<?php echo $gifs_path[$pics[0]->location]; ?>/<?php echo $pics[0]->name; ?>"></a>
+                        <a href="javascript:choosePic(<?php echo $pics[0]->id; ?>,<?php echo $pics[1]->id; ?>);">
+                            <span onmouseout="javascript:changeImageDefault()" onmouseover="javascript:changeImageGreater()" id="image1" ></span>
+                        </a>
                     </p>
                 </li>
                 <li><p class="text-center"><img id="choose_img" src="img/funornot_80x75.png"></p></li>
                 <li>
                     <p class="text-center">
-                        <a onmouseout="javascript:changeImageDefault()" onmouseover="javascript:changeImageLesser()" href="javascript:choosePic(<?php echo $pics[1]->id; ?>,<?php echo $pics[0]->id; ?>);"><img class="img-polaroid" src="<?php echo $gifs_path[$pics[1]->location]; ?>/<?php echo $pics[1]->name; ?>"></a>
+                        <a  href="javascript:choosePic(<?php echo $pics[1]->id; ?>,<?php echo $pics[0]->id; ?>);">
+                            <span onmouseout="javascript:changeImageDefault()" onmouseover="javascript:changeImageLesser()" id="image2" ></span>
+                        </a>
                     </p>
                 </li>
                 </ul>
@@ -44,5 +48,53 @@ $pics = get_random_pics();
         <?php include('includes/footer.php'); ?>
     </div>
   </body>
+ 
   <?php include('includes/scripts.php'); ?>
+  <script type="text/javascript">
+    /*     borrowed some code from
+        [url]http://letmehaveblog.blogspot.com/2006/08/simple-jquery-plugin-to-load-images.html[/url]
+        adapted to work a with a more specific purpose
+    */
+    $.fn.addImage = function(src, fnBefore, fnAfter){ 
+       return this.each(function(){
+            var i = new Image();
+            i.src = src;
+            /*    if you want to make sure the loader displays correctly ,
+                you could set CSS width/height here OR you could set a style
+                as I have done.
+            */
+            $(this).css({"width":i.width, "height":i.height});
+            $(i).fadeTo(0,0);
+            fnBefore(i)
+            $(i).bind("load", i, fnAfter); 
+            this.appendChild(i);
+       }); 
+    }     
+
+    function beforeLoad(el) {
+        console.log("Before image load")
+        $(el).fadeOut();
+    }
+
+    function afterLoad(e) {
+        console.log("After image load")
+        $(e.target).fadeTo(500,1)
+         .parent().removeAttr("style");//can remove parent css here if you like
+    }
+
+    $(document).ready(function(){
+
+        $("#image1").addImage(
+            "<?php echo $gifs_path[$pics[0]->location]; ?>/<?php echo $pics[0]->name; ?>", 
+            beforeLoad,
+            afterLoad
+        );
+
+        $("#image2").addImage(    
+            "<?php echo $gifs_path[$pics[1]->location]; ?>/<?php echo $pics[1]->name; ?>", 
+            beforeLoad,
+            afterLoad
+        );
+    });
+</script>
 </html>
