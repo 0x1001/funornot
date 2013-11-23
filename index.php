@@ -15,11 +15,11 @@ $pics = get_random_pics();
 ?>
   <body>
     <?php include('includes/nav.php'); nav(basename(__FILE__));?>
-    <div class="main">
+    <div class="main" >
         <div class="hero-unit">
-            <h1><img src='img/funornot_h1.png'> Fun or noT?</h1>
+            <h1><img src='img/funornot_h1.png'> Fun or Not?</h1>
             <p>The funniest <a href="http://en.wikipedia.org/wiki/Graphics_Interchange_Format" rel='tooltip' data-toggle="tooltip" title="Graphics Interchange Format">GIFs</a> collection from various sites around the globe!</p>
-            <p>You will always see two random <a href="http://en.wikipedia.org/wiki/Graphics_Interchange_Format" rel='tooltip' data-toggle="tooltip" title="Graphics Interchange Format">GIFs</a> click on one you like the most.</p>
+            <p>You will see two random <a href="http://en.wikipedia.org/wiki/Graphics_Interchange_Format" rel='tooltip' data-toggle="tooltip" title="Graphics Interchange Format">GIFs</a> click on one you like the most.</p>
             <hr>
             <form action=index.php method=POST>
                 <input type=hidden name=id_i value=-1>
