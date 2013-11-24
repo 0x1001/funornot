@@ -1,4 +1,6 @@
-funornot
-========
+Fun or Not
+==========
 
-Fun or not? Web pages repository.
+"Fun or Not" Web pages repository.
+
+http://funornot.netau.net/

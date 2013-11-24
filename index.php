@@ -42,6 +42,11 @@ $pics = get_random_pics();
                 </li>
                 </ul>
             </form>
+            <div id="loading">
+                <div class="progress progress-striped active">
+                    <div class="bar" style="width: 100%;"></div>
+                </div>
+            </div>
             <hr>
             <?php include('includes/commercial.php'); ?>
         </div>
@@ -96,5 +101,10 @@ $pics = get_random_pics();
             afterLoad
         );
     });
+</script>
+<script language="javascript" type="text/javascript">
+  $(window).load(function() {
+    $('#loading').hide();
+  });
 </script>
 </html>
